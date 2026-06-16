@@ -1,0 +1,56 @@
+# OS / 시스템
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# C / C++
+*.o
+*.out
+*.exe
+build/
+cmake-build-*/
+
+# Java
+*.class
+target/
+build/
+.gradle/
+
+# Node
+node_modules/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+instance/
+
+# Raspberry Pi / Hardware
+*.img
+boot/
+firmware/
+
+# Smart Home Security 프로젝트 전용
+data/event_*.jpg
+*.log
+logs/
