@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNN AI 홈 보안 시스템</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Nanum Gothic', sans-serif; 
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%); 
+            color: #1e2937; 
+            padding: 25px; 
+        }
+        nav {
+            background: #1e40af;
+            padding: 16px 25px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        nav a:hover { color: #bae6fd; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #1e40af;
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/"><i class="fas fa-home"></i> 대시보드</a>
+        <a href="/live"><i class="fas fa-video"></i> 실시간 영상</a>
+        <a href="/events"><i class="fas fa-list"></i> 이벤트 로그</a>
+    </nav>
+
+    <h1><i class="fas fa-shield-alt"></i> LNN AI 홈 보안 시스템</h1>
+    <p style="color:#475569; font-size:1.1em; margin-bottom:30px;">Liquid Neural Network를 활용한 지능형 실시간 이상 행동 감지 플랫폼</p>
+
+    <div class="grid">
+        <div class="card">
+            <h2><i class="fas fa-bullseye"></i> 프로젝트 목표</h2>
+            <p>• Raspberry Pi 환경에서 LNN의 실용성 검증</p>
+            <p>• 단순 CCTV를 넘어 AI가 상황을 판단하는 지능형 보안 시스템 구현</p>
+            <p>• Motion Detection과 LNN의 하이브리드 판단으로 높은 정확도 달성</p>
+            <p>• 웹 기반 실시간 모니터링 시스템 구축</p>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-chart-line"></i> 기대 효과</h2>
+            <p>• 조명, 시간대 변화에 강건한 감지 능력</p>
+            <p>• 저전력 엣지 디바이스에서 효율적인 AI 추론</p>
+            <p>• 이벤트 자동 기록 및 원격 모니터링</p>
+            <p>• LNN 기술의 실제 적용 사례 확보</p>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-lightbulb"></i> 향후 개선 방향</h2>
+            <p>• 대량의 실제 이상/정상 데이터로 모델 재학습</p>
+            <p>• Telegram, Email 실시간 알림 연동</p>
+            <p>• YOLO와 LNN 결합한 객체 인식 강화</p>
+            <p>• 모바일 앱 및 클라우드 연동</p>
+        </div>
+    </div>
+</body>
+</html>

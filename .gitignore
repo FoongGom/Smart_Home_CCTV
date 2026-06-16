@@ -1,57 +1,34 @@
-# ==========================================
-# Smart Home Security
-# ==========================================
-
-# OS / 시스템
+# OS
 .DS_Store
 Thumbs.db
 *.log
 *.tmp
 *.swp
-*~
 
 # Python
 __pycache__/
 *.py[cod]
-*.so
 venv/
 .venv/
 env/
-ENV/
 *.egg-info/
 dist/
 build/
-.pytest_cache/
-.coverage
 
-# IDE
-.idea/
-.vscode/
-
-# MariaDB / Database
+# MariaDB 관련
 *.sql.bak
 *.dump
 dumps/
 backups/
-*.mdb
 data/*.db
 
-# 이벤트 이미지 (대량 저장 방지)
+# 이미지 파일 무시 (용량 관리)
+data/images/
 data/event_*.jpg
-data/capture_*.jpg
-*.jpg
+server/app/app/static/images/
+assets/images/
 
-# Raspberry Pi 관련
+# Raspberry Pi
 *.img
 boot/
 firmware/
-*.elf
-*.hex
-
-# 기타
-instance/
-logs/
-tmp/
-temp/
-.env
-.env.*

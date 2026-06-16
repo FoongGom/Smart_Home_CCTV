@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 로그 - LNN 보안</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Nanum Gothic', sans-serif; 
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%); 
+            color: #1e2937; 
+            padding: 25px; 
+        }
+        nav {
+            background: #1e40af;
+            padding: 16px 25px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        nav a:hover { color: #bae6fd; }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1e40af; margin-bottom: 25px; }
+
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            background: white;
+        }
+        th, td { 
+            padding: 16px 12px; 
+            text-align: left; 
+            border-bottom: 1px solid #cbd5e1;
+        }
+        th { 
+            background: #1e40af; 
+            color: white; 
+            font-weight: 600;
+        }
+        tr.anomaly { 
+            background: #fef3f2; 
+        }
+        tr:hover {
+            background: #f1f5f9;
+        }
+        img { 
+            max-width: 320px; 
+            border-radius: 10px; 
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/"><i class="fas fa-home"></i> 대시보드</a>
+        <a href="/live"><i class="fas fa-video"></i> 실시간 영상</a>
+        <a href="/events"><i class="fas fa-list"></i> 이벤트 로그</a>
+    </nav>
+
+    <div class="container">
+        <h1><i class="fas fa-list"></i> 이벤트 로그</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>시간</th>
+                    <th>유형</th>
+                    <th>Confidence</th>
+                    <th>Motion Score</th>
+                    <th>이미지</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                <tr class="{{ 'anomaly' if event.event_type == 'anomaly' else '' }}">
+                    <td>{{ event.timestamp }}</td>
+                    <td><strong>{{ event.event_type.upper() }}</strong></td>
+                    <td>{{ event.confidence|round(3) if event.confidence else '-' }}</td>
+                    <td>{{ event.motion_score|round(0) if event.motion_score else '-' }}</td>
+                    <td>
+                        {% if event.image_path %}
+                            <img src="{{ event.image_path }}" alt="event">
+                        {% else %}
+                            -
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

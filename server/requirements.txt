@@ -1,0 +1,11 @@
+flask
+flask-sqlalchemy
+flask-cors
+opencv-python
+picamera2
+numpy
+torch
+torchvision
+torchaudio
+ncps
+pillow
