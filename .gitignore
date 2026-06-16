@@ -1,3 +1,7 @@
+# ==========================================
+# Smart Home Security
+# ==========================================
+
 # OS / 시스템
 .DS_Store
 Thumbs.db
@@ -5,11 +9,6 @@ Thumbs.db
 *.tmp
 *.swp
 *~
-
-# IDE
-.idea/
-.vscode/
-*.sublime-*
 
 # Python
 __pycache__/
@@ -22,35 +21,37 @@ ENV/
 *.egg-info/
 dist/
 build/
+.pytest_cache/
+.coverage
 
-# C / C++
-*.o
-*.out
-*.exe
-build/
-cmake-build-*/
+# IDE
+.idea/
+.vscode/
 
-# Java
-*.class
-target/
-build/
-.gradle/
+# MariaDB / Database
+*.sql.bak
+*.dump
+dumps/
+backups/
+*.mdb
+data/*.db
 
-# Node
-node_modules/
+# 이벤트 이미지 (대량 저장 방지)
+data/event_*.jpg
+data/capture_*.jpg
+*.jpg
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
-instance/
-
-# Raspberry Pi / Hardware
+# Raspberry Pi 관련
 *.img
 boot/
 firmware/
+*.elf
+*.hex
 
-# Smart Home Security 프로젝트 전용
-data/event_*.jpg
-*.log
+# 기타
+instance/
 logs/
+tmp/
+temp/
+.env
+.env.*
