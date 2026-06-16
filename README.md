@@ -8,7 +8,7 @@
 - 실시간 이벤트 감지 및 보안 모니터링 시스템
 
 ## 🏗 아키텍처
-[Raspberry Pi - Edge]               [PC - Server]
+[Raspberry Pi - Edge]          [PC - Server]
 │                                   │
 Camera ──▶ LNN 추론 ─────────────▶ Flask API
 │                                   │
